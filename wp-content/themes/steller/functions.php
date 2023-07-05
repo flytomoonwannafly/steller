@@ -1,10 +1,8 @@
 <?php
 
-function steller_setup(){
+require_once __DIR__ . '/app/class-wp-autoloader.php';
+Theme\Steller\WP_Autoloader::init();
 
-    load_theme_textdomain('steller');
-    add_theme_support('post-thumbnails');
-    register_nav_menu('primary', 'Primary menu');
-}
+new Theme\Steller\WP_Theme();
+new Theme\Steller\WP_Frontend();
 
-add_action('after_setup_theme', 'steller_setup');
