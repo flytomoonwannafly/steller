@@ -37,6 +37,11 @@ class WP_Theme {
 	 */
 	public function steller_setup() {
 
+		add_theme_support( 'custom-logo', array(
+			'height'      => 48,
+			'width'       => 75,
+			'flex-height' => true,
+		) );
 		load_theme_textdomain( 'steller' );
 		add_theme_support( 'post-thumbnails' );
 		register_nav_menu( 'primary', 'Primary menu' );
