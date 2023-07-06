@@ -1,5 +1,9 @@
 <?php get_header();  ?>
 
-<h2>index file</h2>
+<?php
+
+the_content()
+
+?>
 
 <?php get_footer();  ?>

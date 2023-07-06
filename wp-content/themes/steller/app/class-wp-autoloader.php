@@ -27,6 +27,7 @@ class WP_Autoloader {
         $theme_server_path = get_stylesheet_directory();
 
         self::$autoload_dirs = [
+            "{$theme_server_path}/app/gutenberg-blocks-core/*.php",
             "{$theme_server_path}/app/*.php",
 
         ];

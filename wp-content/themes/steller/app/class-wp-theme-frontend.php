@@ -16,6 +16,7 @@ class WP_Frontend{
     }
     function wp_steller_scripts(){
         wp_enqueue_style('style-css', get_stylesheet_uri());
+        wp_enqueue_style('themify-icons', get_template_directory_uri(). '/assets/themify-icons/css/themify-icons.css' );
 
         wp_enqueue_script('jquery');
         wp_enqueue_script('bootstrap-affix', get_template_directory_uri(). '/assets/js/bootstrap.affix.js');
