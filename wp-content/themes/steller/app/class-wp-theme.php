@@ -19,6 +19,7 @@ class WP_Theme {
 		add_action( 'after_setup_theme', [ $this, 'steller_setup' ] );
 		add_filter( 'nav_menu_css_class', [ $this, 'add_additional_class_on_li' ], 10, 4 );
 		add_filter( 'nav_menu_link_attributes', [ $this, 'steller_nav_link_filter' ], 10, 4 );
+		add_filter( 'upload_mimes', [ $this, 'allow_svg_upload' ], 10, 4 );
 	}
 
 	public static function get_directory_uri() {
@@ -61,6 +62,11 @@ class WP_Theme {
 		}
 
 		return $atts;
+	}
+
+	function allow_svg_upload( $mimes ) {
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
 	}
 
 }
