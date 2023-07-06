@@ -7,11 +7,13 @@ require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-about-author-block.php
 require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-service-block.php';
 require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-header-banner-block.php';
 require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-skills-block.php';
+require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-portfolio-block.php';
 
 use Theme\Steller\GutenbergBlock\GutenbergAboutAuthorBlock;
 use Theme\Steller\GutenbergBlock\GutenbergServiceBlock;
 use Theme\Steller\GutenbergBlock\GutenbergHeaderBannerBlock;
 use Theme\Steller\GutenbergBlock\GutenbergSkillsBlock;
+use Theme\Steller\GutenbergBlock\GutenbergPortfolioBlock;
 
 
 use Theme\Steller\WP_Theme;
@@ -38,6 +40,7 @@ class GutenbergBlockRegister {
 		add_action( 'acf/init', [ new GutenbergServiceBlock, 'register_block' ] );
 		add_action( 'acf/init', [ new GutenbergHeaderBannerBlock, 'register_block' ] );
 		add_action( 'acf/init', [ new GutenbergSkillsBlock, 'register_block' ] );
+		add_action( 'acf/init', [ new GutenbergPortfolioBlock, 'register_block' ] );
 
 	}
 
