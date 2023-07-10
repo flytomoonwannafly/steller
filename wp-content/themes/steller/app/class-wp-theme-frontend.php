@@ -18,7 +18,7 @@ class WP_Frontend{
         wp_enqueue_style('style-css', get_stylesheet_uri());
         wp_enqueue_style('themify-icons', get_template_directory_uri(). '/assets/themify-icons/css/themify-icons.css' );
 
-        wp_enqueue_script('jquery');
+        wp_enqueue_script('jquery-3-4', get_template_directory_uri(). '/assets/js/jquery-3.4.1.js');
         wp_enqueue_script('bootstrap-affix', get_template_directory_uri(). '/assets/js/bootstrap.affix.js');
         wp_enqueue_script('bootstrap-bundle', get_template_directory_uri(). '/assets/js/bootstrap.bundle.js');
         wp_enqueue_script('steller', get_template_directory_uri(). '/assets/js/steller.js');

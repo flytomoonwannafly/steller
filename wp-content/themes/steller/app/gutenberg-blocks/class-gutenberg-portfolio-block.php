@@ -27,11 +27,6 @@ class GutenbergPortfolioBlock extends GutenbergBlock
 					'mode' => true,
 					'jsx' => true
 				),
-				'enqueue_assets' => function () {
-					wp_enqueue_style('gutenberg-block-' . self::BLOCK_NAME, WP_Theme::get_directory_uri() . '/assets/css/gutenberg-blocks/gutenberg-service-block.css', [], WP_Theme::THEME_VERSION);
-					wp_enqueue_script('gutenberg-block-' . self::BLOCK_NAME, WP_Theme::get_directory_uri() . '/assets/scripts/gutenberg-blocks/gutenberg-service-block.js', ['jquery'], WP_Theme::THEME_VERSION, true);
-					wp_enqueue_script('youtube-video-modal', WP_Theme::get_directory_uri() . '/assets/scripts/youtube-video-modal.js', ['jquery'], WP_Theme::THEME_VERSION, true);
-				},
 			));
 		}
 	}
