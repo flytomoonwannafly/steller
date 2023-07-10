@@ -11,10 +11,10 @@
 			</div>
 
 			<div class="socials mt-4">
-				<a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-				<a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-				<a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-				<a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+				<a class="social-item" href="<?php echo get_theme_mod('facebook_link_setting')?>"><i class="<?php echo get_theme_mod('facebook_class_icon_setting')?>"></i></a>
+				<a class="social-item" href="<?php echo get_theme_mod('google_link_setting')?>"><i class="<?php echo get_theme_mod('google_class_icon_setting')?>"></i></a>
+				<a class="social-item" href="<?php echo get_theme_mod('github_link_setting')?>"><i class="<?php echo get_theme_mod('github_class_icon_setting')?>"></i></a>
+				<a class="social-item" href="<?php echo get_theme_mod('twitter_link_setting')?>"><i class="<?php echo get_theme_mod('twitter_class_icon_setting')?>"></i></a>
 			</div>
 		</div>
 		<div class="img-holder">
