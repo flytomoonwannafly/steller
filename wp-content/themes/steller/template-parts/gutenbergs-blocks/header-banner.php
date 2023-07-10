@@ -24,17 +24,11 @@
 
 	<!-- Header-widget -->
 	<div class="widget">
+		<?php foreach (get_field('widget_header') as $card): ?>
 		<div class="widget-item">
-			<h2>124</h2>
-			<p>Happy Clients</p>
+			<h2><?php echo $card['number_of_count']?></h2>
+			<p><?php echo $card['object_of_count']?></p>
 		</div>
-		<div class="widget-item">
-			<h2>456</h2>
-			<p>Project Completed</p>
-		</div>
-		<div class="widget-item">
-			<h2>789</h2>
-			<p>Awards Won</p>
-		</div>
+		<?php endforeach;?>
 	</div>
 </header>
