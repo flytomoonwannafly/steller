@@ -10,6 +10,7 @@ require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-skills-block.php';
 require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-portfolio-block.php';
 require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-testmonomial-block.php';
 require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-hire-me-block.php';
+require_once __DIR__ . '/gutenberg-blocks/class-gutenberg-contact-block.php';
 
 use Theme\Steller\GutenbergBlock\GutenbergAboutAuthorBlock;
 use Theme\Steller\GutenbergBlock\GutenbergServiceBlock;
@@ -18,6 +19,7 @@ use Theme\Steller\GutenbergBlock\GutenbergSkillsBlock;
 use Theme\Steller\GutenbergBlock\GutenbergPortfolioBlock;
 use Theme\Steller\GutenbergBlock\GutenbergTestmonomialBlock;
 use Theme\Steller\GutenbergBlock\GutenbergHireMeBlock;
+use Theme\Steller\GutenbergBlock\GutenbergContactBlock;
 
 
 use Theme\Steller\WP_Theme;
@@ -47,6 +49,7 @@ class GutenbergBlockRegister {
 		add_action( 'acf/init', [ new GutenbergPortfolioBlock, 'register_block' ] );
 		add_action( 'acf/init', [ new GutenbergTestmonomialBlock, 'register_block' ] );
 		add_action( 'acf/init', [ new GutenbergHireMeBlock, 'register_block' ] );
+		add_action( 'acf/init', [ new GutenbergContactBlock, 'register_block' ] );
 
 	}
 
