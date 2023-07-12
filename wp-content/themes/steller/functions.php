@@ -7,5 +7,6 @@ new Theme\Steller\WP_Theme();
 new Theme\Steller\WP_Frontend();
 new Theme\Steller\WP_Customizer();
 new Theme\Steller\WP_Gravity();
+new Theme\Steller\AcfFieldHandler();
 
 Theme\Steller\GutenbergBlockRegister::register_blocks();
