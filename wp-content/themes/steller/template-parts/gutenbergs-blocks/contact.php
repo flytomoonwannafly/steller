@@ -7,8 +7,7 @@
 		<div class="contact text-left">
 			<div class="form">
 				<h6 class="subtitle">Available 24/7</h6>
-				<h6 class="section-title mb-4">Get In Touch</h6>
-				<?php gravity_form( get_field('gravity_form_id'), false, false, false, '', false );?>
+				<?php gravity_form( get_field('gravity_form_id'), true, false, false, '', false );?>
 			</div>
 			<div class="contact-infos">
 				<?php foreach (get_field('contact_info_items') as $item): ?>

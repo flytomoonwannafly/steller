@@ -19,6 +19,7 @@ class WP_Autoloader {
      * Inits auto load.
      */
     static public function init() {
+        self::load_dependencies();
         self::define_autoload_dirs();
         self::load();
     }
@@ -27,7 +28,6 @@ class WP_Autoloader {
         $theme_server_path = get_stylesheet_directory();
 
         self::$autoload_dirs = [
-            "{$theme_server_path}/app/gutenberg-blocks-core/*.php",
             "{$theme_server_path}/app/*.php",
 
         ];
@@ -51,5 +51,9 @@ class WP_Autoloader {
 
         unset( $module, $filepath );
     }
+	static protected function load_dependencies() {
+		$theme_server_path = get_stylesheet_directory();
 
+		require_once "$theme_server_path/app/gutenberg-blocks/abstract-class-gutenberg-block.php";
+	}
 }
