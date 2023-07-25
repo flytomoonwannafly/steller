@@ -22,7 +22,6 @@ wp-config.php
 # Uploads
 /wp-content/uploads/
 
-wp-content/plugins/
 
 
 # Log files
