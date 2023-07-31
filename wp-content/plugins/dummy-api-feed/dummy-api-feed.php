@@ -10,8 +10,18 @@
  */
 
 require_once __DIR__ . '/inc/class-dummy-api-type-register.php';
+require_once __DIR__ . '/inc/class-dummy-feed-type-register.php';
 require_once __DIR__ . '/inc/class-dummy-feed-client.php';
 require_once __DIR__ . '/inc/shortcode-random-post-by-app-id.php';
 
 new \Plugin\DummyApiFeed\DummyApiTypeRegister();
+new \Plugin\DummyApiFeed\DummyFeedTypeRegister();
+
+
+add_action('admin_enqueue_scripts', 'dummy_feed_enqueue_media');
+function dummy_feed_enqueue_media() {
+	wp_enqueue_media();
+	wp_register_script('dummy-feed-media', plugin_dir_url(__FILE__) . 'assets/dummy-feed-media.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('dummy-feed-media');
+}
 
