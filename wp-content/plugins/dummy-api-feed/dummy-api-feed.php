@@ -25,3 +25,11 @@ function dummy_feed_enqueue_media() {
 	wp_enqueue_script('dummy-feed-media');
 }
 
+function register_cron_intervals( $schedules ) {
+	$schedules['ten_minutes'] = array(
+		'interval' => 10 * 60,
+		'display'  => __( 'Once every ten minutes' )
+	);
+	return $schedules;
+}
+add_filter( 'cron_schedules', 'register_cron_intervals' );
